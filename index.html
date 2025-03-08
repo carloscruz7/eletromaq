@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eletromaq Assistência Técnica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eletromaq Assistência Técnica – Serviços rápidos e eficientes para eletrodomésticos. Contate nossos especialistas!">
+    <link rel="canonical" href="https://www.seudominio.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Google Analytics (GA4) snippet - substitua 'G-XXXXXXXXXX' pelo seu ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CTA WhatsApp Fixo */
+        .whatsapp-fixo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background: #004080;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 35px;
+            margin-right: 8px;
+        }
+        .spacer {
+            width: 150px;
+        }
+        .contact-info-top {
+            font-size: 0.9em;
+        }
+
+        /* Hero */
+        .hero {
+            height: 500px;
+            background: url('hero.jpg') center/cover no-repeat;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding-left: 80px;
+            position: relative;
+        }
+        /* Overlay para cobrir toda a imagem */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6); /* Ajuste a opacidade e a cor conforme desejar */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1; /* Para ficar acima da overlay */
+        }
+        .btn {
+            background: #FF6900;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e05a00;
+        }
+
+        /* Serviços */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 50px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .services img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .services-content h3 {
+            color: #004080;
+        }
+
+        /* Contato */
+        .contact {
+            background: #000;
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+        }
+        .contact iframe {
+            width: 550px;
+            height: 350px;
+            border-radius: 10px;
+            border: none;
+        }
+        .icon {
+            background: #FF6900;
+            padding: 6px;
+            width: 22px;
+            height: 22px;
+            border-radius: 5px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .faq-item summary {
+            color: #FF6900;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            margin-left: 20px;
+        }
+        .faq-contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Formulário de Contato Simples */
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #004080;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #FF6900;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #e05a00;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão Fixo de WhatsApp (CTA) -->
+    <a href="https://wa.me/5541996348611" class="whatsapp-fixo" title="Fale conosco via WhatsApp">💬</a>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logotipo Eletromaq">
+            <strong>ELETROMAQ</strong>
+        </div>
+        <div class="contact-info-top">
+            📞 (41) 3289-3349 | 📱 WhatsApp: (41) 99634-8611
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <!-- Overlay para cobrir a imagem inteira -->
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Assistência Técnica Especializada</h1>
+            <p>Serviços rápidos e eficientes para eletrodomésticos. Fale com nossos especialistas!</p>
+            <a href="https://wa.me/5541996348611" class="btn">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services">
+        <img src="imagem-servicos.png" alt="Serviços Eletromaq">
+        <div class="services-content">
+            <h2>Nossos Serviços</h2>
+            <h3>Geladeiras e Freezers</h3>
+            <p>Reparos rápidos para manter seus alimentos sempre frescos.</p>
+            <h3>Máquinas de Lavar</h3>
+            <p>Sua máquina funcionando perfeitamente, com garantia.</p>
+            <h3>Lava-Louças</h3>
+            <p>Louças limpas sem complicação e com rapidez.</p>
+            <h3>Secadoras</h3>
+            <p>Reparo ágil para roupas sempre secas e macias.</p>
+            <h3>Microondas</h3>
+            <p>Conserto eficiente para sua comodidade diária.</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact">
+        <iframe title="Localização da Eletromaq" src="https://maps.google.com/maps?q=R.+Lupionópolis,+1460+-+Curitiba+-+PR&output=embed"></iframe>
+        <div class="contact-info">
+            <h2>Contatos</h2>
+            <div>
+                <span class="icon">📍</span>R. Lupionópolis, 1460 – Curitiba - PR
+            </div>
+            <div>
+                <span class="icon">📞</span>(41) 3289-3349
+            </div>
+            <div>
+                <span class="icon">💬</span><a href="https://wa.me/5541996348611">Fale conosco pelo WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>Dúvidas Frequentes</h2>
+        <details class="faq-item">
+            <summary>Quais eletrodomésticos vocês consertam?</summary>
+            <p>Geladeiras, freezers, lava-louças, máquinas de lavar, microondas e mais.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Usam peças originais?</summary>
+            <p>Sim, somente originais com garantia.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Como faço orçamento?</summary>
+            <p>Orçamento rápido via telefone ou WhatsApp.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Qual o prazo de conserto?</summary>
+            <p>O mais breve possível, garantindo qualidade.</p>
+        </details>
+        <div class="faq-contact">
+            <a href="https://wa.me/5541996348611" class="btn">Fale conosco via WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato Simples -->
+    <section class="contact-form">
+        <h2>Entre em Contato</h2>
+        <form action="mailto:caduwcruzw@gmail.com" method="post" enctype="text/plain">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logotipo Eletromaq">
+            <br>
+            Assistência Técnica Especializada em Eletrodomésticos
+        </div>
+        <div class="footer-info">
+            &copy; 2025 ELETROMAQ Assistência Técnica<br>
+            Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Scroll suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>
