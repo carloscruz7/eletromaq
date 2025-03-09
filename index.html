@@ -69,11 +69,7 @@
         .contact-info-top {
             font-size: 0.9em;
         }
-        /* Separe telefone e WhatsApp */
-        .contact-info-top span {
-            display: inline-block;
-        }
-        /* Em telas pequenas, o separador vira uma quebra de linha */
+        /* Em telas pequenas, telefone e WhatsApp quebram linha */
         @media (max-width: 768px) {
           .top-bar {
             flex-wrap: wrap;
@@ -85,9 +81,9 @@
           }
           .contact-info-top {
             margin-top: 8px;
-          }
-          .contact-info-top .separador {
-            display: block;
+            display: flex;
+            flex-direction: column; /* Força cada item em sua própria linha */
+            gap: 5px;              /* Espaçamento vertical entre os itens */
           }
         }
 
@@ -269,9 +265,8 @@
             <strong>ELETROMAQ</strong>
         </div>
         <div class="contact-info-top">
-            <span class="telefone">📞 (41) 3289-3349</span>
-            <span class="separador"> | </span>
-            <span class="whatsapp-header">📱 WhatsApp: (41) 99634-8611</span>
+            <span>📞 (41) 3289-3349</span>
+            <span>📱 (41) 99634-8611</span>
         </div>
         <div class="spacer"></div>
     </div>
