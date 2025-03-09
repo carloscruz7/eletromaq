@@ -66,25 +66,28 @@
             height: 35px;
             margin-right: 8px;
         }
-        .spacer {
-            width: 150px;
-        }
         .contact-info-top {
             font-size: 0.9em;
         }
-
-        /* Ajuste responsivo para telas menores */
+        /* Separe telefone e WhatsApp */
+        .contact-info-top span {
+            display: inline-block;
+        }
+        /* Em telas pequenas, o separador vira uma quebra de linha */
         @media (max-width: 768px) {
           .top-bar {
-            flex-wrap: wrap;        
-            text-align: center;     
+            flex-wrap: wrap;
+            text-align: center;
             justify-content: center;
           }
           .spacer {
-            display: none;          
+            display: none;
           }
           .contact-info-top {
-            margin-top: 8px;        
+            margin-top: 8px;
+          }
+          .contact-info-top .separador {
+            display: block;
           }
         }
 
@@ -150,7 +153,6 @@
             gap: 50px;
             align-items: center;
         }
-        /* Ajuste para o iframe do mapa: largura total no mobile, com max-width */
         .contact iframe {
             width: 100%;
             max-width: 550px;
@@ -267,9 +269,10 @@
             <strong>ELETROMAQ</strong>
         </div>
         <div class="contact-info-top">
-            📞 (41) 3289-3349 | 📱 WhatsApp: (41) 99634-8611
+            <span class="telefone">📞 (41) 3289-3349</span>
+            <span class="separador"> | </span>
+            <span class="whatsapp-header">📱 WhatsApp: (41) 99634-8611</span>
         </div>
-        <!-- Espaço fixo que some no mobile -->
         <div class="spacer"></div>
     </div>
 
@@ -303,7 +306,6 @@
 
     <!-- Contato -->
     <section class="contact">
-        <!-- Mapa incorporado apontando para R. Lupionópolis, 1460 – Curitiba - PR -->
         <iframe
           title="Localização da Eletromaq"
           width="100%"
